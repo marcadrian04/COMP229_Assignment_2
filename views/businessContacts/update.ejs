@@ -1,0 +1,50 @@
+<!--/**-->
+<!--* @author Marc Adrian Dominguez-->
+<!--* @studentID 301151879-->
+<!--* Personal Portfolion-->
+<!--*/-->
+<!-- MAIN CONTENT -->
+
+<% include ../partials/header.ejs %>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+            <div class="row">
+                <div class="col-md-12 text-center"><h1><%= title %></h1></div>
+            </div>
+            <form class="form well" method="post">
+                <div class="form-group">
+                    <label for="contactNameField">Contact Name</label>
+                    <input type="text" class="form-control" id="contactNameField"
+                           placeholder="Contact Name" name="contactName"
+                           value="<%= businessContacts.contactName %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactNumberField">Contact Number</label>
+                    <input type="text" class="form-control" id="contactNumberField"
+                           placeholder="Contact Number" name="contactNumber"
+                           value="<%= businessContacts.contactNumber %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="emailField">Email</label>
+                    <input type="email" class="form-control" id="emailField"
+                           placeholder="Email" name="email" value="<%= businessContacts.email %>" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    <i class="fa fa-check-square-o"></i> Submit
+                </button>
+                <a href="/businessContacts" class="btn btn-warning">
+                    <i class="fa fa-undo"></i> Cancel
+                </a>
+                <a href="/businessContacts/delete/<%= businessContacts._id %>" class="btn btn-danger">
+                    <i class="fa fa-trash-o"></i> Delete
+                </a>
+            </form>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer.ejs %>

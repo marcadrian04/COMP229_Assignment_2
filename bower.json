@@ -1,0 +1,23 @@
+{
+  "name": "assignment-2-authentication",
+  "description": "Personal Portfolio website component with Business Contact List – Authentication",
+  "main": "server.js",
+  "authors": [
+    "Liavontsi Brechka"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/javascripts/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1",
+    "font-awesome": "^4.7.0"
+  }
+}

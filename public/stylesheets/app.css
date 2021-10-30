@@ -1,0 +1,23 @@
+/**-->
+<!--* @author Marc Adrian Dominguez-->
+<!--* @studentID 301151879-->
+<!--* Personal Portfolion-->*/
+
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-image: url("/assets/images/background.jpg");
+}
+
+a {
+    color: #00B7FF;
+}
+
+.top-buffer {
+    margin-top: 5px;
+}
+
+.subtitle {
+    color: gray;
+    font-weight: 300;
+}

@@ -1,0 +1,17 @@
+<!--/**-->
+<!--* @author Marc Adrian Dominguez-->
+<!--* @studentID 301151879-->
+<!--* Personal Portfolion-->
+<!--*/-->
+<!-- MAIN CONTENT -->
+<% if (title === 'About') { %>
+<% include ../content/about.ejs %>
+<% } else if (title === 'Projects') { %>
+<% include ../content/projects/projects.ejs %>
+<% } else if (title === 'Services') { %>
+<% include ../content/services.ejs %>
+<% } else if (title === 'Contact') { %>
+<% include ../content/contact.ejs %>
+<% } else { %>
+<% include ../content/home.ejs %>
+<% } %>

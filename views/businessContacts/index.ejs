@@ -1,0 +1,62 @@
+<!--/**-->
+<!--* @author Marc Adrian Dominguez-->
+<!--* @studentID 301151879-->
+<!--* Personal Portfolion-->
+<!--*/-->
+<!-- MAIN CONTENT -->
+
+<% include ../partials/header.ejs %>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+            <div class="row">
+                <div class="col-md-12 text-center"><h1>Business Contacts List</h1></div>
+            </div>
+            <div class="table-responsive well">
+                <table class="table table-bordered table-striped table-hover">
+                    <thead>
+                    <tr>
+                        <th class="text-center">Contact Name</th>
+                        <th class="text-center">Contact Number</th>
+                        <th class="text-center">Email</th>
+                        <th class="text-center"></th>
+                        <th class="text-center"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- Template Row -->
+                    <% for (let count = 0; count < businessContacts.length; count++) { %>
+                    <tr>
+                        <td class="text-center"><%= businessContacts[count].contactName %></td>
+                        <td class="text-center"><%= businessContacts[count].contactNumber %></td>
+                        <td class="text-center"><%= businessContacts[count].email %></td>
+
+                        <td class="text-center">
+                            <a href="/businessContacts/<%= businessContacts[count]._id %>" class="btn btn-primary">
+                                <i class="fa fa-pencil-square-o"></i> Edit
+                            </a>
+                        </td>
+
+                        <td class="text-center">
+                            <a href="/businessContacts/delete/<%= businessContacts[count]._id %>"
+                               class="btn btn-danger">
+                                <i class="fa fa-trash-o"></i> Delete
+                            </a>
+                        </td>
+                    </tr>
+                    <% } %>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-offset-1 col-md-10 text-center">
+                <ul class="pagination pagination-lg pager" id="myPager"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer.ejs %>
+
+
